@@ -1,0 +1,80 @@
+{
+    "cells": [
+        {
+            "language": "markdown",
+            "source": [
+                "## Hacker Rank\n\nFor Thursdays you will be solving some selected challenges on HackerRank, please create an account if you don't have then\nFollow the links below:\nread them carefully and solve them then copy-paste your solution below in Code Block"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Required**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Equality In An Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function equalizeArray(arr) {\n    // Write your code here\n    const frequencyMap = {};\n    for (let i = 0; i < arr.length; i++) {\n        if (frequencyMap[arr[i]]) {\n            frequencyMap[arr[i]] += 1;\n        } else {\n            frequencyMap[arr[i]] = 1;\n        }\n    }\n\n    let maxFrequency = 0;\n    for (const element in frequencyMap) {\n        if (frequencyMap[element] > maxFrequency) {\n            maxFrequency = frequencyMap[element];\n        }\n    }\n\n    const deletions = arr.length - maxFrequency;\n    return deletions;\n}"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "### **Optional**:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Halloween Sale](https://www.hackerrank.com/challenges/halloween-sale/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "function howManyGames(p, d, m, s) {\n    // Return the number of games you can buy\n    let gamesCount = 0;\n    let currentPrice = p;\n\n    while (s >= currentPrice && currentPrice >= m) {\n        gamesCount++;\n        s -= currentPrice;\n        currentPrice -= d;\n\n        if (currentPrice < m) {\n            currentPrice = m;\n        }\n    }\n\n    return gamesCount;\n}\n"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "markdown",
+            "source": [
+                "#####  [Sherlock And Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem?isFullScreen=true)\n\nSolution:"
+            ],
+            "outputs": []
+        },
+        {
+            "language": "javascript",
+            "source": [
+                "let count = 0;\n\nfor (let i = a; i <= b; i++) {\n    if (Math.sqrt(i) % 1 === 0) {\n        count++;\n    }\n}\n\nreturn count;"
+            ],
+            "outputs": [
+                {
+                    "items": [
+                        {
+                            "mime": "application/vnd.code.notebook.error",
+                            "value": {
+                                "name": "ReferenceError",
+                                "message": "a is not defined",
+                                "stack": "    at <Cell 9> [3, 14]\n    at <Cell 9> [10, 46]\n    at Script.runInContext (node:vm:141:12)\n    at Script.runInNewContext (node:vm:146:17)\n    at Object.runInNewContext (node:vm:300:38)\n    at C (/home/aws/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:113345)\n    at t.execCode (/home/aws/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:114312)\n    at k.<anonymous> (/home/aws/.vscode-server/extensions/donjayamanne.typescript-notebook-2.0.6/out/extension/server/index.js:2:142156)\n    at k.emit (node:events:513:28)\n    at k.emit (node:domain:489:12)"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
